@@ -1,7 +1,7 @@
 ---
 title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
+author: "Daphne He"
+date: "Autumn 2022"
 output: html_document
 ---
 
@@ -34,11 +34,38 @@ sum <- sum(test_query2(num))
 print(sum)
 ```
 
-## Introduction 
-[TODO]
+## Introduction (Section 1)
+The American jail and prison system have systemically oppressed Black people.
 
-## Data Summary 
-[TODO]
+```{r echo=FALSE}
+black_2018 <- avg_black_incarcerated_2018()
+black_2000 <- avg_black_incarcerated_2000()
+white_2018 <- avg_white_incarcerated_2018()
+max_black <- black_max_incarcerated()
+```
+
+## Data Summary (Section 2)
+The Black incarcerated population count average for ages 15-64 in 2018 was `r black_2018`.
+The Black incarcerated population count average for ages 15-64 in 2000 was `r black_2000`.
+The White incarcerated population count average for ages 15-64 in 2018 was `r white_2018`.
+Incarceration of Black people ages 15-64 was highest in `r max_black`.
+
+
+## Growth of the U.S. Prison Population (Section 3)
+```{r echo=FALSE}
+plot(plot_jail_pop_for_us())
+```
+
+[INSERT CHART CAPTION HERE]
+
+[INSERT SUMMARY PARAGRAPH HERE (ADD A QUESTION)]
+
+
+## Growth of Prison Population by State (Section 4)
+
+```{r echo=FALSE}
+plot_jail_pop_by_states(c("WA", "OR", "CA"))
+```
 
 [TODO ... other sections ... See Canvas for details]
 
