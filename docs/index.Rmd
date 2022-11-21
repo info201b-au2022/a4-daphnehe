@@ -35,7 +35,7 @@ print(sum)
 ```
 
 ## Introduction (Section 1)
-The American jail and prison system have systemically oppressed Black people.
+In this assignment, I will be finding patterns and trends in the data that suggest inequalities and biases in the the American prison and jail system. The data set I'm using provides info on the race, gender, age group, location, year, etc. It will allow me to compare the demographic of inmates in different locations at various points of time. There is no denying that Black people have historically been oppressed in American society and the American prison system continues to reinforce this systematic oppression by incarcerating Black males at much higher rates than other groups. From Data Feminism, we know that power is unequally distributed in our world. Current practices reinforce the power wielded disproportionately by the elite. I plan to use data to expose and challenges the fairness of the American jail and prison system over the last five decades. The direct stakeholders are the people in the American prison system and the everyone who's job is affected by the American prison and jail system. The indirect stakeholders are everyone who is subject to the law. I will answer questions like "Which demographic is most likely to be incarcerated?" and "How has the prison population changed over time?"
 
 ```{r echo=FALSE}
 black_2018 <- avg_black_incarcerated_2018()
@@ -45,10 +45,7 @@ max_black <- black_max_incarcerated()
 ```
 
 ## Data Summary (Section 2)
-The Black incarcerated population count average for ages 15-64 in 2018 was `r black_2018`.
-The Black incarcerated population count average for ages 15-64 in 2000 was `r black_2000`.
-The White incarcerated population count average for ages 15-64 in 2018 was `r white_2018`.
-Incarceration of Black people ages 15-64 was highest in `r max_black`.
+The Black incarcerated population count average for ages 15-64 in 2018 was `r black_2018`. The Black incarcerated population count average for ages 15-64 in 2000 was `r black_2000`. This shows that the number of Black people incarcerated only continues to grow, further proving that the system continues to reinforce itself and oppress young Black people. For comparison, the White incarcerated population count average for ages 15-64 in 2018 was `r white_2018`. Considering that Black people only make up around 13% of the US population, the proportions of Black people in jail compared to that of White people only further prove the biases of the American prison and jail system. There doesn't seem to be any change. In fact, the incarceration of Black people ages 15-64 was highest in `r max_black`. It's about time politicians looked into why this is the case. 
 
 
 ## Growth of the U.S. Prison Population (Section 3)
@@ -56,9 +53,9 @@ Incarceration of Black people ages 15-64 was highest in `r max_black`.
 plot(plot_jail_pop_for_us())
 ```
 
-[INSERT CHART CAPTION HERE]
+This bar chart shows the US prison population from 1970 to 2018. 
 
-[INSERT SUMMARY PARAGRAPH HERE (ADD A QUESTION)]
+In the chart, we can see that there is a general increase in the U.S. prison population from 1970 to 2018. This shows that there seems to changes over time that affect the amount of people being sentenced to prison. The question is: Is the increase in prison population due to there being more crimes committed or due to changes in policy and laws sentencing people?
 
 
 ## Growth of Prison Population by State (Section 4)
@@ -66,6 +63,12 @@ plot(plot_jail_pop_for_us())
 ```{r echo=FALSE}
 plot_jail_pop_by_states(c("WA", "OR", "CA"))
 ```
+
+[INSERT CHART CAPTION HERE]
+
+[INSERT SUMMARY PARAGRAPH HERE (ADD A QUESTION)]
+
+
 
 [TODO ... other sections ... See Canvas for details]
 

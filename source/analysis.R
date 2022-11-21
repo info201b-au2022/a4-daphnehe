@@ -93,8 +93,8 @@ change_over_time()
 get_year_jail_pop <- function() {
     tot_jail_pop <- data %>% 
       group_by(year) %>% 
-      summarise (total_jail_pop = mean(total_jail_pop, na.rm = TRUE)) %>% 
-      select(year, total_jail_pop)
+      summarise (total_pop = mean(total_pop, na.rm = TRUE)) %>% 
+      select(year, total_pop)
     return(tot_jail_pop)
 }
 get_year_jail_pop()
@@ -103,8 +103,8 @@ View(get_year_jail_pop())
 # This function ... <todo:  update comment>
 plot_jail_pop_for_us <- function()  {
   bar_chart <- ggplot(get_year_jail_pop()) +
-    geom_col(mapping = aes(x = year, y = total_jail_pop)) +
-    labs(x = "Year", y = "Total jail populaton")
+    geom_col(mapping = aes(x = year, y = total_pop)) +
+    labs(x = "Year", y = "Total prison populaton")
   return(bar_chart)   
 } 
 plot_jail_pop_for_us()
@@ -120,11 +120,12 @@ get_jail_pop_by_states <- function(states) {
   pop_by_states <- data %>% 
     filter(state %in% states) %>% 
     group_by(state, year) %>% 
-    summarise(avg = mean(total_pop, na.rm = TRUE))
+    mutate(avg = mean(total_pop, na.rm = TRUE)) %>% 
+    select(year, state, avg)
   return(pop_by_states)
 }
 
-#get_jail_pop_by_states(c("CA", "AL", "WA"))
+get_jail_pop_by_states(c("CA", "AL", "WA"))
 
 plot_jail_pop_by_states <- function(states) {
   plotted_chart <- ggplot(get_jail_pop_by_states(states)) +
@@ -134,8 +135,7 @@ plot_jail_pop_by_states <- function(states) {
 }
 
 plot_jail_pop_by_states(c("WA", "OR", "CA"))
-
-
+ 
 
 ## Section 5  ---- 
 #----------------------------------------------------------------------------#
