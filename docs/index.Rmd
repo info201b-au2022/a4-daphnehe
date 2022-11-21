@@ -1,5 +1,5 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
+title: "U.S. Prison System Discrimination"
 author: "Daphne He"
 date: "Autumn 2022"
 output: html_document
@@ -11,28 +11,7 @@ source("../source/analysis.R")
 ```
 
 ## Abstract 
-The US prison and jail system continues to reinforce biased practices that continue to oppress Black males more than any other demographic. This would be made more clear by several trends comparing the Black prison and jail population with other groups of people. There is also the clear increase in incareration rate in general that's concerning. 
-
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
-
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-* Another bullet point
-of numbers: `r test_query2(num)`.
-
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
+The US prison and jail system continues to reinforce biased practices that continue to oppress Black males more than any other demographic. This would be made more clear by several trends comparing the Black prison and jail population with other groups of people. There is also the clear increase in incarceration rate in general that's concerning. 
 
 ## Introduction (Section 1)
 In this assignment, I will be finding patterns and trends in the data that suggest inequalities and biases in the the American prison and jail system. The data set I'm using provides info on the race, gender, age group, location, year, etc. It will allow me to compare the demographic of inmates in different locations at various points of time. There is no denying that Black people have historically been oppressed in American society and the American prison system continues to reinforce this systematic oppression by incarcerating Black males at much higher rates than other groups. From Data Feminism, we know that power is unequally distributed in our world. Current practices reinforce the power wielded disproportionately by the elite. I plan to use data to expose and challenges the fairness of the American jail and prison system over the last five decades. The direct stakeholders are the people in the American prison system and the everyone who's job is affected by the American prison and jail system. The indirect stakeholders are everyone who is subject to the law. I will answer questions like "Which demographic is most likely to be incarcerated?" and "How has the prison population changed over time?"
@@ -73,13 +52,16 @@ The jail population in California appears to be growing at a much quicker rate t
 plot_race_prop_by_county()
 ```
 
+*Caption:* The scatter plot shows the Black prison population vs the White prison population.
 
-## Incarceration rate by state map (Section 6)
+Question: Where are Black people being incarcerated at higher rates than White people? What do all theses places have in common? The scatter plot shows that most of the time there are more White people, but the proportion in comparison to how many White people are in the U.S. versus Black people show that Black people have much higher incarceration rates. There are a few outliers. 
+
+## Incarceration rate by state choropleth map (Section 6)
 ```{r echo=FALSE}
 plot_map_incarceration()
 ```
 
-[TODO ... other sections ... See Canvas for details]
+*Caption:* A map displaying the incarceration rates by state.
 
-_All the very best with your work!_
-
+Question: Why do Texas and California have such high incarceration rates?
+The choropleth map shows that California and Texas have the highest incarceration rates because they are the brightest red. This is probably because they have larger populations and also have laws and policies that keep people in prison for longer or for lesser crimes. 
