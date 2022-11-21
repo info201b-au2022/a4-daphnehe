@@ -105,7 +105,7 @@ plot_jail_pop_for_us <- function()  {
   bar_chart <- ggplot(get_year_jail_pop()) +
     geom_col(mapping = aes(x = year, y = total_pop)) +
     labs(x = "Year", y = "Total prison populaton")
-  return(bar_chart)   
+  return(bar_chart)
 } 
 plot_jail_pop_for_us()
 

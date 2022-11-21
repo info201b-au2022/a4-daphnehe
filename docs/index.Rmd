@@ -11,7 +11,7 @@ source("../source/analysis.R")
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
+The US prison and jail system continues to reinforce biased practices that continue to oppress Black males more than any other demographic. This would be made more clear by several trends comparing the Black prison and jail population with other groups of people. There is also the clear increase in incareration rate in general that's concerning. 
 
 # Test (TODO: Remove before submission!!)
 ```{r echo=FALSE}
@@ -53,10 +53,9 @@ The Black incarcerated population count average for ages 15-64 in 2018 was `r bl
 plot(plot_jail_pop_for_us())
 ```
 
-This bar chart shows the US prison population from 1970 to 2018. 
+*Caption:* This bar chart shows the US prison population from 1970 to 2018. 
 
 In the chart, we can see that there is a general increase in the U.S. prison population from 1970 to 2018. This shows that there seems to changes over time that affect the amount of people being sentenced to prison. The question is: Is the increase in prison population due to there being more crimes committed or due to changes in policy and laws sentencing people?
-
 
 ## Growth of Prison Population by State (Section 4)
 
@@ -64,11 +63,9 @@ In the chart, we can see that there is a general increase in the U.S. prison pop
 plot_jail_pop_by_states(c("WA", "OR", "CA"))
 ```
 
-[INSERT CHART CAPTION HERE]
+*Caption:* The lines chart shows the change in average prison population for Washington, Oregon, and California. 
 
-[INSERT SUMMARY PARAGRAPH HERE (ADD A QUESTION)]
-
-
+The jail population in California appears to be growing at a much quicker rate than that of Washington and Oregon. It also shows that California had a much larger jail population in 1970 than Washington and Oregon. Washington's incarceration rate is slightly higher than Oregon's. Regardless which state, the prison jail population is growing. The question is: Why is California's incarceration rate so much higher than Washington and Oregon's?
 
 [TODO ... other sections ... See Canvas for details]
 
