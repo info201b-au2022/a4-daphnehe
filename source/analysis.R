@@ -144,12 +144,57 @@ plot_jail_pop_by_states(c("WA", "OR", "CA"))
 # See Canvas
 #----------------------------------------------------------------------------#
 
+get_race_prop_by_county <- function() {
+  race_by_county <- data %>% 
+    filter(year == 2018) %>% 
+    group_by(county_name) %>% 
+    summarise (black_jail_pop = mean(black_jail_pop, na.rm = TRUE), white_jail_pop = mean(white_jail_pop, na.rm = TRUE)) %>%
+    select(county_name, black_jail_pop, white_jail_pop)
+  return(race_by_county)
+}
+get_race_prop_by_county()
+
+plot_race_prop_by_county <- function(){
+  scatter_plot <- ggplot(get_race_prop_by_county()) +
+    geom_point(mapping = aes(x = white_jail_pop, y = black_jail_pop))
+  return(scatter_plot)
+}
+plot_race_prop_by_county()
+
 ## Section 6  ---- 
 #----------------------------------------------------------------------------#
 # <a map shows potential patterns of inequality that vary geographically>
 # Your functions might go here ... <todo:  update comment>
 # See Canvas
 #----------------------------------------------------------------------------#
+
+get_incarceration_by_state <- function(){
+  incarceration <- data %>% 
+    filter (year == 2018) %>% 
+    group_by(state) %>% 
+    summarise(total_jail_pop = sum(total_jail_pop, na.rm = TRUE)) %>% 
+    select(state, total_jail_pop) %>% 
+    mutate(state = state.name[match(state,state.abb)]) %>% 
+    mutate(state = tolower(state))
+  return(incarceration)
+}
+get_incarceration_by_state()
+
+state_shape <- map_data("state") %>% 
+  rename(state = region) %>%
+  left_join(get_incarceration_by_state(), by="state")
+View(state_shape)
+
+plot_map_incarceration <- function(){
+  map_incarceration <- ggplot(state_shape) + 
+    geom_polygon(mapping = aes(x = long, y = lat, group = group, fill = total_jail_pop), color = "white", size = .1) +
+    coord_map() + 
+    scale_fill_continuous(low = "#132B43", high = "Red") +
+    labs(fill = "Incarceration Rate")
+  return(map_incarceration)
+}
+
+plot_map_incarceration()
 
 ## Load data frame ---- 
 

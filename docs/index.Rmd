@@ -67,6 +67,18 @@ plot_jail_pop_by_states(c("WA", "OR", "CA"))
 
 The jail population in California appears to be growing at a much quicker rate than that of Washington and Oregon. It also shows that California had a much larger jail population in 1970 than Washington and Oregon. Washington's incarceration rate is slightly higher than Oregon's. Regardless which state, the prison jail population is growing. The question is: Why is California's incarceration rate so much higher than Washington and Oregon's?
 
+## Male vs female jail population (Section 5)
+
+```{r echo=FALSE}
+plot_race_prop_by_county()
+```
+
+
+## Incarceration rate by state map (Section 6)
+```{r echo=FALSE}
+plot_map_incarceration()
+```
+
 [TODO ... other sections ... See Canvas for details]
 
 _All the very best with your work!_
