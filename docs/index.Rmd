@@ -54,7 +54,7 @@ plot_race_prop_by_county()
 
 *Caption:* The scatter plot shows the Black prison population vs the White prison population.
 
-Question: Where are Black people being incarcerated at higher rates than White people? What do all theses places have in common? The scatter plot shows that most of the time there are more White people, but the proportion in comparison to how many White people are in the U.S. versus Black people show that Black people have much higher incarceration rates. There are a few outliers. 
+Question: Why are Black people being incarcerated at higher rates than White people? What do all theses places have in common? The scatter plot shows that most of the time there are more White people in the prison population, but the proportion in comparison to how many White people are in the U.S. versus Black people show that Black people have much higher incarceration rates. There are a few outliers. 
 
 ## Incarceration rate by state choropleth map (Section 6)
 ```{r echo=FALSE}
