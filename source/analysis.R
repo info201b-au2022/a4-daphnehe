@@ -156,7 +156,8 @@ get_race_prop_by_county()
 
 plot_race_prop_by_county <- function(){
   scatter_plot <- ggplot(get_race_prop_by_county()) +
-    geom_point(mapping = aes(x = white_jail_pop, y = black_jail_pop))
+    geom_point(mapping = aes(x = white_jail_pop, y = black_jail_pop)) +
+    labs(x = "White jail population", y = "Black jail population") 
   return(scatter_plot)
 }
 plot_race_prop_by_county()
